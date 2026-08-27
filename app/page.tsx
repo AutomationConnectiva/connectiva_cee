@@ -23,7 +23,7 @@ const logoGroups = [
   ['Technology Partners', ['2.png','7.png','9.png','12.png','33.png','temenos.png','comarch.png','tieto.png'], 'technology'],
 ];
 
-const testimonials = [
+const testimonials: [string, string, string][] = [
   ['From vendors and bankers to speakers and panelists, the level of expertise throughout the event is truly premium. Combined with a high standard of organization, it delivers a consistently top-quality experience.', 'Danijela Vuksanović', 'Addiko Bank'],
   ['After four years with Banking CEE, what stands out most is the evolution. This year’s event was excellent, with highly relevant topics.', 'Lyubomir Tankishev', 'Evrotrust'],
   ['An outstanding event in every aspect — from organization and venue to accommodation, networking and speakers. A truly well-rounded, high-quality experience.', 'Daniela Bobocea', 'Exim Banca Românească'],

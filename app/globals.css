@@ -36,7 +36,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 .header-cta,.btn{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.header-cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.16)}
 .hero-content h1,.expo-hero-content h1,.summit-hero-content h1{text-wrap:balance}.hero-copy,.expo-hero-copy,.summit-hero-copy{text-wrap:pretty}
 .hero:after,.expo-hero:after,.summit-hero:after{content:"";position:absolute;right:-12vw;bottom:-24vw;width:54vw;height:54vw;border:1px solid rgba(255,255,255,.10);border-radius:50%;box-shadow:0 0 0 8vw rgba(255,255,255,.025),0 0 0 16vw rgba(255,255,255,.018);pointer-events:none}
-.stat-grid{background:linear-gradient(90deg,transparent,rgba(38,118,165,.08),transparent)}.stat{min-height:170px}.stat strong{font-variant-numeric:tabular-nums}
+.stat{min-height:170px}.stat strong{font-variant-numeric:tabular-nums}
 .advisor,.ecosystem-grid>div{transition:transform .22s ease,box-shadow .22s ease}.advisor:hover,.ecosystem-grid>div:hover{transform:translateY(-5px);box-shadow:var(--shadow-soft);position:relative;z-index:2}
 .event-card img,.photo img,.story img,.summit-story img,.sponsor-visual img,.summit-sponsor-layout figure img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}.event-card:hover img,.photo:hover img,.story:hover img,.summit-story:hover img,.sponsor-visual:hover img,.summit-sponsor-layout figure:hover img{transform:scale(1.035)}
 .event-card{box-shadow:0 24px 60px rgba(7,27,53,.12)}

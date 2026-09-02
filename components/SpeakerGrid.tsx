@@ -1,8 +1,32 @@
-'use client';
-import { useState } from 'react';
-import Image from 'next/image';
-export type Speaker={name:string;title:string;org:string;image:string};
-export default function SpeakerGrid({speakers,featured,label='Speakers'}:{speakers:Speaker[];featured:number;label?:string}){
- const [open,setOpen]=useState(false); const shown=open?speakers:speakers.slice(0,featured);
- return <><div className="speaker-card-grid">{shown.map(s=><article className="speaker-card" key={s.name}><div className="speaker-headshot"><Image src={s.image} alt={s.name} fill sizes="(max-width: 700px) 50vw, 25vw" /></div><div className="speaker-card-copy"><h3>{s.name}</h3><p>{s.title}</p><strong>{s.org}</strong></div></article>)}</div>{speakers.length>featured&&<div className="speaker-more-wrap"><button className="speaker-more" onClick={()=>setOpen(v=>!v)} aria-expanded={open}>{open?`Show Fewer ${label} ↑`:`View All ${label} ↓`}</button></div>}</>
+// lib/getSpeakers.ts
+import { supabase } from './supabase';
+import type { Speaker } from '../components/SpeakerGrid';
+
+function toDirectDriveUrl(url: string) {
+  const match = url.match(/\/d\/(.+?)\//);
+  return match ? `https://drive.google.com/uc?export=view&id=${match[1]}` : url;
+}
+
+export async function getSpeakers(): Promise<Speaker[]> {
+  const { data, error } = await supabase
+    .from('speakers')
+    .select(`
+      full_name,
+      job,
+      link_photo,
+      companies ( company_name )
+    `)
+    .order('presentation_id', { ascending: true });
+
+  if (error) {
+    console.error('Error fetching speakers:', error);
+    return [];
+  }
+
+  return data.map((s) => ({
+    name: s.full_name,
+    title: s.job ?? '',
+    org: s.companies?.company_name ?? '',
+    image: s.link_photo ? toDirectDriveUrl(s.link_photo) : '/images/placeholder-speaker.jpg',
+  }));
 }

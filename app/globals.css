@@ -95,17 +95,17 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 .sponsor-logo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .sponsor-logo-grid-gold{grid-template-columns:minmax(220px,320px)}
 .sponsor-logo-grid>div{
-  min-height: 110px;                  /* Makes the white background box slightly sleeker */
+  min-height: 128px;                  /* Makes the white background box slightly sleeker */
   background: #fff;
   border: 1px solid rgba(10,35,70,.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px 32px;                 /* Increased padding to push logos away from edges */
+  padding: 16px 24px;                 /* Increased padding to push logos away from edges */
 }
 .sponsor-logo-grid img{
-  max-height: 42px;                  /* Hard limits the logo height so it looks elegant */
-  max-width: 85%;                    /* Keeps the logo safely inside the box boundaries */
+  max-height: 64px;                  /* Hard limits the logo height so it looks elegant */
+  max-width: 90%;                    /* Keeps the logo safely inside the box boundaries */
   width: auto;                       /* Restores natural proportional scaling width */
   height: auto;                      /* Restores natural proportional scaling height */
   object-fit: contain;               /* Ensures zero distortion or pixelation stretching */

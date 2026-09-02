@@ -95,19 +95,21 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 .sponsor-logo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .sponsor-logo-grid-gold{grid-template-columns:minmax(220px,320px)}
 .sponsor-logo-grid>div{
-  min-height: 128px;                  /* Makes the white background box slightly sleeker */
+  min-height: 128px;
   background: #fff;
   border: 1px solid rgba(10,35,70,.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;                 /* Increased padding to push logos away from edges */
+  padding: 16px;                      /* Balanced padding for a cleaner border frame */
 }
+
 .sponsor-logo-grid img{
-  width: 90% !important;              /* Maximizes horizontal expansion capacity */
-  height: 85px !important;            /* Greatly increases vertical footprint while staying clean */
-  object-fit: contain !important;     /* CRITICAL: Enforces layout engines to maintain true ratios */
+  width: 82% !important;              /* Shrunk slightly from 90% to avoid crowding the sides */
+  height: 72px !important;            /* Reduced from 85px to give top and bottom breathing room */
+  object-fit: contain !important;     /* Keeps aspect ratios perfectly intact */
 }
+
 .summit-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .summit-sponsors 
 .sponsor-cta{margin-top:28px}

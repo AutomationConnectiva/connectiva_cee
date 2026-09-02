@@ -4,17 +4,15 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '://google.com',
+        hostname: 'drive.google.com',
       },
       {
         protocol: 'https',
-        hostname: '://googleusercontent.com',
+        hostname: 'lh3.googleusercontent.com',
       },
     ],
   },
 };
-
 export default nextConfig;
-
 // Keeps your Cloudflare compilation environment tracking smoothly
 import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());

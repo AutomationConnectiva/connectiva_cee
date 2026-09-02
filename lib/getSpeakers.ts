@@ -3,7 +3,7 @@ import type { Speaker } from '../components/SpeakerGrid';
 
 function toDirectDriveUrl(url: string) {
   const match = url.match(/\/d\/(.+?)\//);
-  return match ? `https://drive.google.com/uc?export=view&id=${match[1]}` : url;
+  return match ? `https://lh3.googleusercontent.com/d/${match[1]}` : url;
 }
 
 export async function getSpeakers(): Promise<Speaker[]> {

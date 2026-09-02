@@ -101,14 +101,12 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 24px;                 /* Increased padding to push logos away from edges */
+  padding: 12px;                 /* Increased padding to push logos away from edges */
 }
 .sponsor-logo-grid img{
-  max-height: 64px;                  /* Hard limits the logo height so it looks elegant */
-  max-width: 90%;                    /* Keeps the logo safely inside the box boundaries */
-  width: auto;                       /* Restores natural proportional scaling width */
-  height: auto;                      /* Restores natural proportional scaling height */
-  object-fit: contain;               /* Ensures zero distortion or pixelation stretching */
+  width: 90% !important;              /* Maximizes horizontal expansion capacity */
+  height: 85px !important;            /* Greatly increases vertical footprint while staying clean */
+  object-fit: contain !important;     /* CRITICAL: Enforces layout engines to maintain true ratios */
 }
 .summit-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .summit-sponsors 

@@ -3,7 +3,7 @@ import Header from '../../components/Header';
 import RequestAttendanceForm from '../../components/RequestAttendanceForm';
 import SpeakerGrid from '../../components/SpeakerGrid';
 import TestimonialSlider from '../../components/TestimonialSlider';
-import { expoSpeakers } from '../../data/eventSpeakers';
+import { getSpeakers } from '../../lib/getSpeakers';
 
 const modules = [
   'The AI-Driven Bank',
@@ -28,7 +28,8 @@ const speakerPreview = [
 
 const partnerNames = ['Comarch', 'Tieto', 'Evrotrust', 'CRIF', 'Temenos', 'Backbase', 'OneSpan', 'FME'];
 
-export default function ExpoPage() {
+export default async function ExpoPage() {
+  const speakers = await getSpeakers();
   return (
     <main className="expo-page" id="top">
       <section className="expo-hero">
@@ -57,7 +58,7 @@ export default function ExpoPage() {
 
       <section id="speakers" className="section-white expo-speakers">
         <div className="shell expo-section-head"><div><p className="eyebrow dark">Speakers</p><h2>Meet the Leaders Shaping Banking Across CEE.</h2></div><div className="expo-inline-stats"><div><strong>50+</strong><span>Speakers</span></div><div><strong>3</strong><span>Stages</span></div></div></div>
-        <div className="shell"><SpeakerGrid speakers={expoSpeakers} featured={8} label="Speakers" /></div>
+        <div className="shell"><SpeakerGrid speakers={speakers} featured={8} label="Speakers" /></div>
       </section>
 
       <section id="agenda" className="expo-agenda section-blue">

@@ -104,7 +104,28 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 @media(prefers-reduced-motion:reduce){.join-grid>div,.join-grid a,.join-grid>div:after{transition:none!important}}
 
 /* Phase 16 — event speaker, testimonial and sponsor refinements */
-.speaker-card-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:38px}.speaker-card{background:#fff;border:1px solid rgba(10,35,70,.1);overflow:hidden;box-shadow:0 12px 30px rgba(15,35,65,.06)}.speaker-headshot{position:relative;aspect-ratio:1/1;overflow:hidden;background:#eef2f6}.speaker-headshot img{object-fit:cover;object-position:center center}.speaker-card-copy{padding:18px 18px 21px}.speaker-card-copy h3{font-size:1.12rem;margin:0 0 7px;color:#092d55}.speaker-card-copy p{font-size:.9rem;line-height:1.45;margin:0 0 8px;color:#475569}.speaker-card-copy strong{display:block;font-size:.82rem;line-height:1.35;color:#0f766e}.speaker-more-wrap{text-align:center;margin-top:32px}.speaker-more{border:0;background:#092d55;color:#fff;padding:14px 24px;font-weight:700;letter-spacing:.02em;cursor:pointer}.summit-page .speaker-more{background:#087f73}.event-testimonial-wrap{max-width:920px;margin-top:42px}.testimonial-slider{background:#f5f7fa;padding:34px 38px}.testimonial-slider blockquote{margin:0}.testimonial-slider blockquote p{font-size:1.25rem;line-height:1.6;margin:0 0 22px}.testimonial-slider footer{display:flex;flex-direction:column;gap:3px}.testimonial-slider footer span{opacity:.7}.testimonial-controls{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin-top:24px}.testimonial-controls button{width:40px;height:40px;border:1px solid rgba(9,45,85,.18);background:white;cursor:pointer;font-size:1.1rem}.confirmed-sponsor-block{margin-top:34px}.sponsor-tier-label{font-weight:800;color:#092d55;margin:24px 0 14px}.sponsor-history-note{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800;color:#087f73}.sponsor-logo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.sponsor-logo-grid-gold{grid-template-columns:minmax(220px,320px)}.sponsor-logo-grid>div{min-height:128px;background:#fff;border:1px solid rgba(10,35,70,.1);display:flex;align-items:center;justify-content:center;padding:18px}.sponsor-logo-grid img{width:100%;height:90px;object-fit:contain}.summit-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.summit-sponsors .sponsor-cta{margin-top:28px}
+.speaker-card-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:38px}.speaker-card{background:#fff;border:1px solid rgba(10,35,70,.1);overflow:hidden;box-shadow:0 12px 30px rgba(15,35,65,.06)}.speaker-headshot{position:relative;aspect-ratio:1/1;overflow:hidden;background:#eef2f6}.speaker-headshot img{object-fit:cover;object-position:center center}.speaker-card-copy{padding:18px 18px 21px}.speaker-card-copy h3{font-size:1.12rem;margin:0 0 7px;color:#092d55}.speaker-card-copy p{font-size:.9rem;line-height:1.45;margin:0 0 8px;color:#475569}.speaker-card-copy strong{display:block;font-size:.82rem;line-height:1.35;color:#0f766e}.speaker-more-wrap{text-align:center;margin-top:32px}.speaker-more{border:0;background:#092d55;color:#fff;padding:14px 24px;font-weight:700;letter-spacing:.02em;cursor:pointer}.summit-page .speaker-more{background:#087f73}.event-testimonial-wrap{max-width:920px;margin-top:42px}.testimonial-slider{background:#f5f7fa;padding:34px 38px}.testimonial-slider blockquote{margin:0}.testimonial-slider blockquote p{font-size:1.25rem;line-height:1.6;margin:0 0 22px}.testimonial-slider footer{display:flex;flex-direction:column;gap:3px}.testimonial-slider footer span{opacity:.7}.testimonial-controls{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin-top:24px}.testimonial-controls button{width:40px;height:40px;border:1px solid rgba(9,45,85,.18);background:white;cursor:pointer;font-size:1.1rem}.confirmed-sponsor-block{margin-top:34px}.sponsor-tier-label{font-weight:800;color:#092d55;margin:24px 0 14px}.sponsor-history-note{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800;color:#087f73}
+.sponsor-logo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.sponsor-logo-grid-gold{grid-template-columns:minmax(220px,320px)}
+.sponsor-logo-grid>div{
+  min-height: 128px;
+  background: #fff;
+  border: 1px solid rgba(10,35,70,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;                      /* Balanced padding for a cleaner border frame */
+}
+
+.sponsor-logo-grid img{
+  width: 82% !important;              /* Shrunk slightly from 90% to avoid crowding the sides */
+  height: 72px !important;            /* Reduced from 85px to give top and bottom breathing room */
+  object-fit: contain !important;     /* Keeps aspect ratios perfectly intact */
+}
+
+.summit-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.summit-sponsors 
+.sponsor-cta{margin-top:28px}
 @media(max-width:950px){.speaker-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sponsor-logo-grid,.summit-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.speaker-card-grid{gap:12px}.speaker-card-copy{padding:13px}.speaker-card-copy h3{font-size:1rem}.speaker-card-copy p{font-size:.8rem}.speaker-card-copy strong{font-size:.75rem}.testimonial-slider{padding:25px 22px}.testimonial-slider blockquote p{font-size:1.05rem}.sponsor-logo-grid,.summit-logo-grid{grid-template-columns:1fr 1fr}.sponsor-logo-grid>div{min-height:100px;padding:10px}.sponsor-logo-grid img{height:70px}}
 

@@ -35,7 +35,7 @@ export default async function ExpoPage() {
       <section className="expo-hero">
         <Header variant="expo" ctaLabel="Request Attendance" ctaHref="/request-attendance?event=expo-2026" />
         <div className="expo-hero-media" aria-hidden="true">
-          <Image src="/images/expo-2025-hero.jpg" alt="" fill priority className="cover" />
+          <Image src="/images/expo-2025-hero.jpg" alt="" fill priority className="cover expo-hero-image" />
           <div className="expo-hero-overlay" />
         </div>
         <div className="shell expo-hero-content">

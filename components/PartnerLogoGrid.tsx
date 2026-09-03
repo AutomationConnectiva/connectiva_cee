@@ -10,5 +10,7 @@ const logos=[
 ];
 export default function PartnerLogoGrid(){
  const [open,setOpen]=useState(false); const visible=open?logos:logos.slice(0,8);
- return <><div className="partner-logo-grid">{visible.map((src,i)=><div key={src}><Image src={src} alt={`Technology partner ${i+1}`} width={220} height={100}/></div>)}</div><div className="partner-expand"><button onClick={()=>setOpen(v=>!v)}>{open?'SHOW FEWER ↑':'VIEW MORE PARTNERS ↓'}</button></div></>
+ return <>
+<div className="partner-logo-grid">{visible.map((src,i)=><div key={src}><Image src={src} alt={`Technology partner ${i+1}`} fill/></div>)}</div>
+<div className="partner-expand"><button onClick={()=>setOpen(v=>!v)}>{open?'SHOW FEWER ↑':'VIEW MORE PARTNERS ↓'}</button></div></>
 }

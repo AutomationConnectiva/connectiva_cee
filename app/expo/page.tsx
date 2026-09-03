@@ -29,7 +29,7 @@ const speakerPreview = [
 const partnerNames = ['Comarch', 'Tieto', 'Evrotrust', 'CRIF', 'Temenos', 'Backbase', 'OneSpan', 'FME'];
 
 export default async function ExpoPage() {
-  const speakers = await getSpeakers();
+  const speakers = await getSpeakers('expo');
   return (
     <main className="expo-page" id="top">
       <section className="expo-hero">

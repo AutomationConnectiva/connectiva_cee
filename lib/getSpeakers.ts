@@ -6,16 +6,20 @@ function toDirectDriveUrl(url: string) {
   return match ? `https://lh3.googleusercontent.com/d/${match[1]}` : url;
 }
 
-export async function getSpeakers(): Promise<Speaker[]> {
+export async function getSpeakers(context: 'expo' | 'summit'): Promise<Speaker[]> {
+  const filterColumn = context === 'expo' ? 'show_on_expo' : 'show_on_summit';
+
   const { data, error } = await supabase
     .from('speakers')
     .select(`
       full_name,
       job,
       link_photo,
+      display_order,
       companies ( company_name )
     `)
-    .order('presentation_id', { ascending: true });
+    .eq(filterColumn, true)
+    .order('display_order', { ascending: true, nullsFirst: false });
 
   if (error) {
     console.error('Error fetching speakers:', error);

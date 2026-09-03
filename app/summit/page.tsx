@@ -3,7 +3,7 @@ import Header from '../../components/Header';
 import RequestAttendanceForm from '../../components/RequestAttendanceForm';
 import SpeakerGrid from '../../components/SpeakerGrid';
 import TestimonialSlider from '../../components/TestimonialSlider';
-import { summitSpeakers } from '../../data/eventSpeakers';
+import { getSpeakers } from '../../lib/getSpeakers';
 
 const modules = [
   'AI, Automation & the Intelligent Bank',
@@ -17,7 +17,8 @@ const modules = [
 
 const partnerNames = ['Evrotrust', 'Tieto', 'Comarch', 'OneSpan', 'FME', 'Authologic', 'ERI', 'Salesforce'];
 
-export default function SummitPage() {
+export default async function SummitPage() {
+  const speakers = await getSpeakers('summit');
   return (
     <main className="summit-page" id="top">
       <section className="summit-hero">
@@ -46,7 +47,9 @@ export default function SummitPage() {
 
       <section id="speakers" className="section-white summit-speakers">
         <div className="shell summit-section-head"><div><p className="eyebrow dark">2026 Speakers</p><h2>Senior Practitioners. Practical Perspectives.</h2></div><p className="section-intro">A look back at the senior banking and industry leaders who joined the 2026 Summit. The 2027 speaker line-up will be announced as the programme develops.</p></div>
-        <div className="shell"><SpeakerGrid speakers={summitSpeakers} featured={6} label="2026 Speakers" /></div>
+        <div className="shell">
+          <SpeakerGrid speakers={speakers} featured={6} label="2026 Speakers" />
+        </div>
       </section>
 
       <section id="agenda" className="summit-agenda">

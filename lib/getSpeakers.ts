@@ -7,7 +7,8 @@ function toDirectDriveUrl(url: string) {
 }
 
 export async function getSpeakers(context: 'expo' | 'summit'): Promise<Speaker[]> {
-  const filterColumn = context === 'expo' ? 'show_on_expo' : 'show_on_summit';
+  const visibilityColumn = context === 'expo' ? 'show_on_expo' : 'show_on_summit';
+  const orderColumn = context === 'expo' ? 'display_order' : 'display_order_summit';
 
   const { data, error } = await supabase
     .from('speakers')
@@ -16,10 +17,11 @@ export async function getSpeakers(context: 'expo' | 'summit'): Promise<Speaker[]
       job,
       link_photo,
       display_order,
+      display_order_summit,
       companies ( company_name )
     `)
-    .eq(filterColumn, true)
-    .order('display_order', { ascending: true, nullsFirst: false });
+    .eq(visibilityColumn, true)
+    .order(orderColumn, { ascending: true, nullsFirst: false });
 
   if (error) {
     console.error('Error fetching speakers:', error);

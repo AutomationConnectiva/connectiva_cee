@@ -1,20 +1,13 @@
 import Image from 'next/image';
 import Header from '../components/Header';
 import TestimonialSlider from '../components/TestimonialSlider';
+import { getSpeakers } from '../lib/getSpeakers';
 
 const stats = [
   ['15+', 'Events'],
   ['20+', 'CEE Countries'],
   ['2,500+', 'Attendees'],
   ['100+', 'Technology Partners'],
-];
-
-const advisory = [
-  ['Sébastien de Brouwer', 'Deputy CEO', 'European Banking Federation', '/images/advisory-sebastien-uniform.jpg'],
-  ['Giuseppe Castelbuono', 'Chief Information Officer', 'ING Italia', '/images/advisory-giuseppe-uniform.jpg'],
-  ['Danijela Vuksanovic', 'Board Member, CMO', 'Addiko Bank', '/images/advisory-danijela-uniform.jpg'],
-  ['Davorin Okorn', 'Director Strategic Risk and Reporting', 'OTP Banka', '/images/advisory-davorin-uniform.jpg'],
-  ['Daniela Bobocea', 'Head of Governance and Project Management', 'Exim Banca Românească', '/images/advisory-daniela-uniform.jpg'],
 ];
 
 const logoGroups = [
@@ -30,7 +23,8 @@ const testimonials: [string, string, string][] = [
   ['It was very positive. I could see that many of the people had attended multiple Banking CEE events. There’s a small community of people who are actually friends these days.', 'Donal Greene', 'Authologic'],
 ];
 
-export default function Home() {
+export default async function Home() {
+  const advisory = await getSpeakers('advisory');
   return (
     <main id="top">
       <section className="hero">
@@ -67,12 +61,12 @@ export default function Home() {
           <p>Our Advisory Board brings together 18+ senior industry leaders from 10+ countries, with more than 250 years of combined experience. Representing perspectives from across the banking ecosystem, the Board provides insight into the priorities, challenges and opportunities shaping the industry.</p>
         </div>
         <div className="shell advisory-grid">
-          {advisory.map(([name, title, org, photo]) => (
-            <article className="advisor" key={name}>
-              <div className="advisor-photo"><Image src={photo} alt={name} fill className="cover" /></div>
-              <div className="advisor-copy"><h3>{name}</h3><p>{title}</p><strong>{org}</strong></div>
-            </article>
-          ))}
+          {advisory.map((person) => (
+  <article className="advisor" key={person.name}>
+    <div className="advisor-photo"><Image src={person.image} alt={person.name} fill className="cover" /></div>
+    <div className="advisor-copy"><h3>{person.name}</h3><p>{person.title}</p><strong>{person.org}</strong></div>
+  </article>
+))}
         </div>
         <div className="shell inline-link"><a href="#">View the Full Advisory Board →</a></div>
       </section>

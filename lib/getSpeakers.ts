@@ -6,32 +6,42 @@ function toDirectDriveUrl(url: string) {
   return match ? `https://lh3.googleusercontent.com/d/${match[1]}` : url;
 }
 
-export async function getSpeakers(context: 'expo' | 'summit'): Promise<Speaker[]> {
-  const visibilityColumn = context === 'expo' ? 'show_on_expo' : 'show_on_summit';
-  const orderColumn = context === 'expo' ? 'display_order' : 'display_order_summit';
+export async function getSpeakers(context: 'expo' | 'summit' | 'advisory'): Promise<Speaker[]> {
+  const visibilityColumn = context === 'expo' ? 'show_on_expo' : context === 'summit' ? 'show_on_summit' : 'show_on_advisory';
+  const orderColumn = context === 'expo' ? 'display_order' : context === 'summit' ? 'display_order_summit' : 'display_order_advisory';
 
-  const { data, error } = await supabase
+  let query = supabase
     .from('speakers')
     .select(`
       full_name,
       job,
       link_photo,
+      advisory_photo,
       display_order,
       display_order_summit,
+      display_order_advisory,
       companies ( company_name )
     `)
-    .eq(visibilityColumn, true)
-    .order(orderColumn, { ascending: true, nullsFirst: false });
+    .eq(visibilityColumn, true);
+
+  if (context === 'summit') {
+    query = query.eq('summit_year', 2026);
+  }
+
+  const { data, error } = await query.order(orderColumn, { ascending: true, nullsFirst: false });
 
   if (error) {
     console.error('Error fetching speakers:', error);
     return [];
   }
 
-  return data.map((s) => ({
-    name: s.full_name,
-    title: s.job ?? '',
-    org: (s.companies as any)?.company_name ?? '',
-    image: s.link_photo ? toDirectDriveUrl(s.link_photo) : '/images/placeholder-speaker.jpg',
-  }));
+  return data.map((s: any) => {
+    const photoSource = context === 'advisory' ? s.advisory_photo : s.link_photo;
+    return {
+      name: s.full_name,
+      title: s.job ?? '',
+      org: s.companies?.company_name ?? '',
+      image: photoSource ? toDirectDriveUrl(photoSource) : '/images/placeholder-speaker.jpg',
+    };
+  });
 }

@@ -84,7 +84,7 @@ export default function Home() {
             <h2>From Online Beginnings to a Banking Community Across CEE.</h2>
             <p>Banking CEE began during COVID, bringing the industry together online through dedicated summits focused on payments, lending and customer experience. In 2022, those communities came together in person for the first Banking CEE Expo in Prague — beginning a journey that has since taken us to Bucharest, Budapest and Sofia.</p>
           </div>
-          <div className="map-card map-real">
+          <div className="map-card">
             <Image src="/images/cee-map.jpg" alt="Map of Central and Eastern Europe highlighting the Banking CEE footprint" fill className="map-image" />
           </div>
         </div>

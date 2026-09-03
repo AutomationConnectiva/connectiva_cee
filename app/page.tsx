@@ -81,7 +81,7 @@ export default function Home() {
           <div className="shell">
               <div className="journey-heading">
                <p className="eyebrow">Our Journey</p>
-               <h1>From Online Beginnings to a Banking Community Across CEE.</h1>
+               <h2>From Online Beginnings to a Banking Community Across CEE.</h2>
           </div>
           <div className="journey-grid">
          <p>Banking CEE began during COVID, bringing the industry together online through dedicated summits focused on payments, lending and customer experience. In 2022, those communities came together in person for the first Banking CEE Expo in Prague — beginning a journey that has since taken us to Bucharest, Budapest and Sofia.</p>

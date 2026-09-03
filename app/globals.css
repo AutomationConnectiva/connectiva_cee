@@ -38,7 +38,7 @@
 }
 
 .journey-heading{margin-bottom:40px}
-.journey-heading h1{max-width:none;white-space:nowrap;font-size:clamp(1.8rem,3.4vw,3.6rem)}
+.journey-heading h2{max-width:none;white-space:nowrap;font-size:clamp(1.8rem,3.4vw,3.6rem)}
 .journey-heading h2{white-space:normal;font-size:2.2rem}
 
 /* Summit identity */

@@ -22,7 +22,7 @@ export default async function SummitPage() {
   return (
     <main className="summit-page" id="top">
       <section className="summit-hero">
-        <Header variant="summit" ctaLabel="Request Attendance" ctaHref="/request-attendance?event=summit-2027" />
+        <Header variant="summit" activePage="summit" ctaLabel="Request Attendance" ctaHref="/request-attendance?event=summit-2027" />
         <div className="summit-hero-media" aria-hidden="true">
           <Image src="/images/summit-2026-panel.jpg" alt="" fill priority className="cover" />
           <div className="summit-hero-overlay" />

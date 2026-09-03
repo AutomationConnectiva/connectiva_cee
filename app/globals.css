@@ -14,6 +14,8 @@
   background: none;      /* Removes the background gradient box completely */
   overflow: hidden;
 }
+.nav a.active{opacity:1}
+.nav a.active:after{right:0}
 
 .map-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:108px;height:108px;border-radius:50%;background:var(--green);color:var(--navy);display:grid;place-items:center;font-size:1.6rem;font-weight:900}.map-orbit{position:absolute;border:1px solid rgba(83,239,122,.24);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}.orbit-a{width:320px;height:320px}.orbit-b{width:430px;height:430px}.city{position:absolute;font-size:.85rem;text-transform:uppercase;letter-spacing:.12em}
 .prague {  left: 36.5%; top: 36.5%;}

@@ -6,9 +6,10 @@ type HeaderProps = {
   ctaLabel?: string;
   ctaHref?: string;
   variant?: 'network' | 'expo' | 'summit';
+  activePage?: 'network' | 'expo' | 'summit' | 'insights' | 'partners' | 'contact';
 };
 
-export default function Header({ ctaLabel = 'Join the Network', ctaHref = '/#join', variant = 'network' }: HeaderProps) {
+export default function Header({ ctaLabel = 'Join the Network', ctaHref = '/#join', variant = 'network', activePage }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -25,12 +26,12 @@ export default function Header({ ctaLabel = 'Join the Network', ctaHref = '/#joi
         <Image src="/images/banking-cee-logo-white.png" alt="Banking CEE Network" width={230} height={70} priority />
       </a>
       <nav className="nav" aria-label="Primary navigation">
-        <a href="/">Network</a>
-        <a href="/expo">Expo</a>
-        <a href="/summit">Summit</a>
-        <a href="/insights">Insights</a>
-        <a href="/partners">Partners</a>
-        <a href="/contact">Contact</a>
+        <a href="/" className={activePage === 'network' ? 'active' : ''}>Network</a>
+        <a href="/expo" className={activePage === 'expo' ? 'active' : ''}>Expo</a>
+        <a href="/summit" className={activePage === 'summit' ? 'active' : ''}>Summit</a>
+        <a href="/insights" className={activePage === 'insights' ? 'active' : ''}>Insights</a>
+        <a href="/partners" className={activePage === 'partners' ? 'active' : ''}>Partners</a>
+        <a href="/contact" className={activePage === 'contact' ? 'active' : ''}>Contact</a>
       </nav>
       <a className="header-cta" href={ctaHref}>{ctaLabel}</a>
     </header>

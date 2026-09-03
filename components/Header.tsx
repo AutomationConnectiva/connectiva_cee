@@ -1,4 +1,6 @@
+'use client';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 type HeaderProps = {
   ctaLabel?: string;
@@ -7,8 +9,18 @@ type HeaderProps = {
 };
 
 export default function Header({ ctaLabel = 'Join the Network', ctaHref = '/#join', variant = 'network' }: HeaderProps) {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 80);
+    }
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <header className={`site-header site-header-${variant}`}>
+    <header className={`site-header site-header-${variant} ${scrolled ? 'site-header-scrolled' : ''}`}>
       <a className="brand" href="/" aria-label="Banking CEE Network home">
         <Image src="/images/banking-cee-logo-white.png" alt="Banking CEE Network" width={230} height={70} priority />
       </a>

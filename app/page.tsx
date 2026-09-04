@@ -64,20 +64,18 @@ export default async function Home() {
          <AdvisoryGrid advisors={advisory} featured={5} />
       </section>
 
-      <section className="journey section-navy">
-          <div className="shell">
-              <div className="journey-heading">
-               <p className="eyebrow">Our Journey</p>
-               <h2>From Online Beginnings to a Banking Community Across CEE.</h2>
-          </div>
-          <div className="journey-grid">
-         <p>Banking CEE began during COVID, bringing the industry together online through dedicated summits focused on payments, lending and customer experience. In 2022, those communities came together in person for the first Banking CEE Expo in Prague — beginning a journey that has since taken us to Bucharest, Budapest and Sofia.</p>
-          <div className="map-card">
-          <Image src="/images/cee-map.png" alt="Map of Central and Eastern Europe highlighting the Banking CEE footprint" fill className="map-image" />
-          </div>
+    <section className="journey section-navy">
+  <div className="shell journey-grid">
+    <div>
+      <p className="eyebrow">Our Journey</p>
+      <h2>From Online Beginnings to a Banking Community Across CEE.</h2>
+      <p>Banking CEE began during COVID, bringing the industry together online through dedicated summits focused on payments, lending and customer experience. In 2022, those communities came together in person for the first Banking CEE Expo in Prague — beginning a journey that has since taken us to Bucharest, Budapest and Sofia.</p>
+    </div>
+    <div className="map-card">
+      <Image src="/images/cee-map.png" alt="Map of Central and Eastern Europe highlighting the Banking CEE footprint" fill className="map-image" />
+    </div>
   </div>
-</div>
-      </section>
+</section>
 
       <section className="ecosystem section-light">
         <div className="shell">

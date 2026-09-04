@@ -61,7 +61,7 @@ export default async function Home() {
           <p>Our Advisory Board brings together 18+ senior industry leaders from 10+ countries, with more than 250 years of combined experience. Representing perspectives from across the banking ecosystem, the Board provides insight into the priorities, challenges and opportunities shaping the industry.</p>
         </div>
         <div className="shell advisory-grid">
-          {advisory.map((person) => (
+          {advisory.slice(0, 5).map((person) => (
   <article className="advisor" key={person.name}>
     <div className="advisor-photo"><Image src={person.image} alt={person.name} fill className="cover" /></div>
     <div className="advisor-copy"><h3>{person.name}</h3><p>{person.title}</p><strong>{person.org}</strong></div>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Header from '../components/Header';
 import TestimonialSlider from '../components/TestimonialSlider';
+import AdvisoryGrid from '../components/AdvisoryGrid';
 import { getSpeakers } from '../lib/getSpeakers';
 
 const stats = [
@@ -60,15 +61,7 @@ export default async function Home() {
           <div><p className="eyebrow dark">Shaped by the Community</p><h2>Industry Experience at the Heart of Banking CEE.</h2></div>
           <p>Our Advisory Board brings together 18+ senior industry leaders from 10+ countries, with more than 250 years of combined experience. Representing perspectives from across the banking ecosystem, the Board provides insight into the priorities, challenges and opportunities shaping the industry.</p>
         </div>
-        <div className="shell advisory-grid">
-          {advisory.slice(0, 5).map((person) => (
-  <article className="advisor" key={person.name}>
-    <div className="advisor-photo"><Image src={person.image} alt={person.name} fill className="cover" /></div>
-    <div className="advisor-copy"><h3>{person.name}</h3><p>{person.title}</p><strong>{person.org}</strong></div>
-  </article>
-))}
-        </div>
-        <div className="shell inline-link"><a href="#">View the Full Advisory Board →</a></div>
+         <AdvisoryGrid advisors={advisory} featured={5} />
       </section>
 
       <section className="journey section-navy">

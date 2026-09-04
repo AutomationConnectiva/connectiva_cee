@@ -10,6 +10,7 @@
 .journey-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
 
 .journey-grid p{font-size:1.06rem;line-height:1.75;color:rgba(255,255,255,.74);max-width:650px}
+.journey-grid h2{font-size:clamp(1.8rem,3.2vw,3.4rem)}
 .map-card {
   height: 470px;
   position: relative;

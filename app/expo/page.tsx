@@ -128,7 +128,10 @@ export default async function ExpoPage() {
         <div className="shell confirmed-sponsor-block"><p className="sponsor-tier-label">Gold Sponsor</p><div className="sponsor-logo-grid sponsor-logo-grid-gold">
           <div><Image src="/images/event-sponsors/expo-authologic.png" alt="Authologic" width={300} height={170} /></div></div>
           <p className="sponsor-tier-label">Silver Sponsors</p><div className="sponsor-logo-grid"><div>
-            <Image src="/images/event-sponsors/expo-evrotrust.png" alt="Evrotrust" width={240} height={140} /></div><div><Image src="/images/event-sponsors/expo-eri.png" alt="ERI" width={240} height={140} /></div><div><Image src="/images/event-sponsors/expo-tieto.png" alt="Tieto Banktech" width={240} height={140} /></div><div><Image src="/images/event-sponsors/expo-guardsquare.png" alt="Guardsquare" width={240} height={140} /></div></div></div>
+            <Image src="/images/event-sponsors/expo-evrotrust.png" alt="Evrotrust" width={240} height={140} /></div><div>
+              <Image src="/images/event-sponsors/expo-eri.png" alt="ERI" width={240} height={140} /></div><div>
+                <Image src="/images/event-sponsors/expo-tieto.png" alt="Tieto Banktech" width={240} height={140} /></div><div>
+                  <Image src="/images/event-sponsors/expo-guardsquare.png" alt="Guardsquare" width={240} height={140} /></div></div></div>
         <div className="shell sponsor-cta"><a className="btn expo-dark-btn" href="mailto:info@bancee.eu?subject=Banking%20CEE%20Expo%20Sponsorship">Explore Sponsorship Opportunities</a><span>info@bancee.eu</span></div>
       </section>
 

@@ -182,3 +182,35 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 .site-header-scrolled{background:linear-gradient(180deg,rgba(7,27,53,.82),rgba(7,27,53,.55)) !important;backdrop-filter:blur(12px) !important;border-bottom-color:rgba(255,255,255,.14)}
 .site-header-scrolled.site-header-expo{background:linear-gradient(180deg,rgba(10,63,131,.82),rgba(10,63,131,.55)) !important;backdrop-filter:blur(12px) !important;border-bottom-color:rgba(255,255,255,.14)}
 .site-header-scrolled.site-header-summit{background:linear-gradient(180deg,rgba(8,124,121,.82),rgba(8,124,121,.55)) !important;backdrop-filter:blur(12px) !important;border-bottom-color:rgba(255,255,255,.16)}
+
+
+.video-experience .video-embed-wrap {
+  margin-top: 2rem;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-tagline {
+  margin-top: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  color: #6b7280;
+}

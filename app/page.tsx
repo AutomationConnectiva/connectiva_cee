@@ -132,7 +132,7 @@ export default async function Home() {
   <div className="shell video-embed-wrap">
     <div className="video-embed">
       <iframe
-        src="https://www.youtube.com/watch?v=f3aZWQJfxYY"
+        src="https://www.youtube.com/embed/f3aZWQJfxYY"
         title="Digital Banking CEE Summit 2026 | Bucharest – Event Highlights"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

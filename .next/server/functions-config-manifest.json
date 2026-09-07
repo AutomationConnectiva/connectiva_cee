@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "functions": {
+    "/api/admin/people-import": {},
+    "/api/attendance/request": {},
+    "/api/attendance/review": {},
+    "/api/registration/complete": {}
+  }
+}

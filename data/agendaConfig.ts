@@ -1,0 +1,25 @@
+export const agendaConfig = {
+  eventName: 'Banking CEE Expo 2026',
+  pageTitle: 'Explore the 2026 Agenda',
+  date: '19-20 November 2026',
+  location: 'Prague, Czechia',
+  // Replace these paths with the exact production routes/anchor IDs used by the live website.
+  links: {
+    network: '/',
+    expo: '/expo',
+    summit: '/summit',
+    insights: '/insights',
+    partnersPage: '/partners',
+    contact: '/contact',
+    speakers: '/expo#speakers',
+    advisoryBoard: '/#advisory-board',
+    partners: '/expo#partners',
+    attendance: '/expo#attend',
+    speaking: '/contact?interest=speaking',
+    partnerships: '/partners',
+    linkedin: '#',
+    youtube: '#',
+    terms: '/terms-and-conditions',
+    privacy: '/privacy-policy',
+  },
+};

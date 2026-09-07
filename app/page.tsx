@@ -119,7 +119,30 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="insights" className="insights section-light"><div className="shell split-head"><div><p className="eyebrow dark">Beyond the Events</p><h2>The Conversations Continue.</h2></div><div><p>Insights, perspectives and conversations from the people shaping banking across CEE.</p><a className="text-link" href="#">Explore All Insights →</a></div></div><div className="shell insight-feature"><div className="insight-visual"><Image src="/images/summit-panel.jpg" alt="Banking CEE insight discussion" fill className="cover" /></div><div className="insight-copy"><span>Featured Conversation</span><h3>What banking leaders across CEE are prioritising next</h3><p>Executive perspectives drawn from the conversations shaping the Banking CEE community.</p><a href="#">Watch the Interview →</a></div></div></section>
+
+ 
+  <section id="insights" className="video-experience section-light">
+  <div className="shell split-head">
+    <div>
+      <p className="eyebrow dark">Watch the Experience</p>
+      <h2>See Banking CEE in Action.</h2>
+    </div>
+    <p>Experience the conversations, connections and atmosphere that bring the Banking CEE community together across Central &amp; Eastern Europe.</p>
+  </div>
+  <div className="shell video-embed-wrap">
+    <div className="video-embed">
+      <iframe
+        src="https://www.youtube.com/watch?v=f3aZWQJfxYY"
+        title="Digital Banking CEE Summit 2026 | Bucharest – Event Highlights"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  </div>
+  <div className="shell video-tagline"><span>More Than Events. A Stronger Banking Community.</span></div>
+</section>
+
+
 
       <section id="join" className="join section-navy"><div className="shell"><p className="eyebrow">Join Banking CEE</p><h2>Be Part of What Comes Next.</h2><p className="join-intro">Whether you&apos;re looking to exchange ideas with peers, contribute your expertise or build relationships across the banking ecosystem, there&apos;s a place for you within Banking CEE.</p><div className="join-grid"><div><span>Attend</span><h3>Banks, Financial Institutions, Regulators &amp; Associations</h3><p>Join the Banking CEE community on a complimentary, qualification-based basis.</p><a href="/request-attendance">Request Attendance →</a></div><div><span>Contribute</span><h3>Banking Leaders &amp; Industry Experts</h3><p>Share your experience, contribute to the conversation and explore speaker or Advisory Board opportunities.</p><a href="#">Get Involved →</a></div><div id="partners"><span>Partner</span><h3>Technology &amp; Solution Providers</h3><p>Build meaningful relationships with banking leaders across CEE through Banking CEE partnership opportunities.</p><a href="#">Explore Partnerships →</a></div></div></div></section>
 
